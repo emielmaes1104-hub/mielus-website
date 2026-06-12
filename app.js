@@ -133,16 +133,17 @@ async function submitForm(form, successEl) {
 
     const data = await response.json().catch(() => ({}));
 
-    if (response.ok && (data.success === 'true' || data.success === true)) {
+    if (data.success === 'true' || data.success === true) {
       form.hidden = true;
       if (successEl) {
         successEl.removeAttribute('hidden');
         successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     } else {
-      throw new Error('server error');
+      const msg = typeof data.message === 'string' ? data.message.toLowerCase() : '';
+      throw new Error(msg.includes('activat') ? 'activation' : 'server error');
     }
-  } catch {
+  } catch (err) {
     submitBtn.disabled = false;
     submitBtn.textContent = originalText;
 
@@ -151,7 +152,9 @@ async function submitForm(form, successEl) {
       errorEl.className = 'form-error';
       submitBtn.insertAdjacentElement('afterend', errorEl);
     }
-    errorEl.textContent = 'Er ging iets mis. Probeer opnieuw of mail naar info@mielus.be';
+    errorEl.textContent = err.message === 'activation'
+      ? 'Formulier nog niet geactiveerd. Check de bevestigingsmail in info@mielus.be en klik op de link.'
+      : 'Er ging iets mis. Probeer opnieuw of mail naar info@mielus.be';
   }
 }
 
