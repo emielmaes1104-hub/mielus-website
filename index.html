@@ -527,7 +527,10 @@
       <div class="booking-layout">
 
         <!-- Booking form -->
-        <form id="booking-form" class="booking-form animate-in" action="https://formspree.io/f/info@mielus.be" method="POST" novalidate>
+        <form id="booking-form" class="booking-form animate-in" action="https://formsubmit.co/ajax/info@mielus.be" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nieuwe boekingsaanvraag — MIELUS" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
           <div class="form-row">
             <div class="form-group">
@@ -709,7 +712,10 @@
 
       <div class="collab-form-wrap animate-in">
         <h2 class="section-title">Stuur een voorstel</h2>
-        <form class="booking-form collab-form" action="https://formspree.io/f/info@mielus.be" method="POST" novalidate>
+        <form id="collab-form" class="booking-form collab-form" action="https://formsubmit.co/ajax/info@mielus.be" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nieuwe samenwerkingsaanvraag — MIELUS" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
           <div class="form-row">
             <div class="form-group">

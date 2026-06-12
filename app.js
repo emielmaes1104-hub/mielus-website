@@ -116,47 +116,67 @@ function initMobileMenu() {
   });
 }
 
-function initFormHandling() {
-  const form = document.getElementById('booking-form');
-  if (!form) return;
+async function submitForm(form, successEl) {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  let errorEl = form.querySelector('.form-error');
 
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Versturen…';
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Versturen…';
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' },
+    });
 
-    let errorEl = form.querySelector('.form-error');
+    const data = await response.json().catch(() => ({}));
 
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' },
-      });
-
-      if (response.ok) {
-        form.hidden = true;
-        const success = document.getElementById('form-success');
-        success.removeAttribute('hidden');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } else {
-        throw new Error('server error');
+    if (response.ok && (data.success === 'true' || data.success === true)) {
+      form.hidden = true;
+      if (successEl) {
+        successEl.removeAttribute('hidden');
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-    } catch {
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
-
-      if (!errorEl) {
-        errorEl = document.createElement('p');
-        errorEl.className = 'form-error';
-        submitBtn.insertAdjacentElement('afterend', errorEl);
-      }
-      errorEl.textContent = 'Er ging iets mis. Probeer opnieuw of mail naar emielmaes1104@gmail.com';
+    } else {
+      throw new Error('server error');
     }
-  });
+  } catch {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+
+    if (!errorEl) {
+      errorEl = document.createElement('p');
+      errorEl.className = 'form-error';
+      submitBtn.insertAdjacentElement('afterend', errorEl);
+    }
+    errorEl.textContent = 'Er ging iets mis. Probeer opnieuw of mail naar info@mielus.be';
+  }
+}
+
+function initFormHandling() {
+  const bookingForm = document.getElementById('booking-form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', e => {
+      e.preventDefault();
+      submitForm(bookingForm, document.getElementById('form-success'));
+    });
+  }
+
+  const collabForm = document.getElementById('collab-form');
+  if (collabForm) {
+    const successMsg = document.createElement('div');
+    successMsg.className = 'form-success';
+    successMsg.hidden = true;
+    successMsg.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><p>Bedankt voor je voorstel! Emiel neemt zo snel mogelijk contact met je op.</p>';
+    collabForm.appendChild(successMsg);
+
+    collabForm.addEventListener('submit', e => {
+      e.preventDefault();
+      submitForm(collabForm, successMsg);
+    });
+  }
 }
 
 function init() {
