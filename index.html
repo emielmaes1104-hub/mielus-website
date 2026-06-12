@@ -3,12 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MIELUS is een allround commerciële DJ uit Wichelen. Boek hem voor jouw event of leer zelf draaien via privélessen." />
+
+  <!-- ── Primary SEO ── -->
   <title>MIELUS | DJ · Wichelen</title>
+  <meta name="description" content="Boek MIELUS, allround commerciële DJ uit Wichelen. Actief op fuiven, festivals en privé-evenementen in België. Privélessen DJ'en voor iedereen." />
+  <meta name="keywords" content="DJ Wichelen, DJ huren België, DJ boeken, allround DJ, MIELUS, DJ fuif, DJ festival, DJ privé-evenement, DJ lessen, DJ Oost-Vlaanderen" />
+  <meta name="author" content="Emiel Maes" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mielus.be/" />
+
+  <!-- ── Open Graph (Facebook, LinkedIn, WhatsApp…) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MIELUS" />
+  <meta property="og:title" content="MIELUS | DJ · Wichelen" />
+  <meta property="og:description" content="Boek MIELUS, allround commerciële DJ uit Wichelen. Actief op fuiven, festivals en privé-evenementen in België." />
+  <meta property="og:url" content="https://mielus.be/" />
+  <meta property="og:image" content="https://mielus.be/Media/IMG_4040.JPG" />
+  <meta property="og:image:alt" content="MIELUS op het podium — DJ uit Wichelen" />
+  <meta property="og:locale" content="nl_BE" />
+
+  <!-- ── Twitter / X Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MIELUS | DJ · Wichelen" />
+  <meta name="twitter:description" content="Boek MIELUS, allround commerciële DJ uit Wichelen. Fuiven, festivals, privé-events & privélessen." />
+  <meta name="twitter:image" content="https://mielus.be/Media/IMG_4040.JPG" />
+  <meta name="twitter:image:alt" content="MIELUS op het podium" />
+
+  <!-- ── Structured Data (JSON-LD) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://mielus.be/#emiel",
+        "name": "Emiel Maes",
+        "alternateName": "MIELUS",
+        "jobTitle": "DJ",
+        "url": "https://mielus.be",
+        "email": "info@mielus.be",
+        "image": "https://mielus.be/Media/IMG_3470%202.jpg",
+        "description": "Allround commerciële DJ uit Wichelen, actief sinds 2022 op fuiven, festivals en privé-evenementen in België.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Wichelen",
+          "addressRegion": "Oost-Vlaanderen",
+          "addressCountry": "BE"
+        },
+        "sameAs": [
+          "https://www.instagram.com/deejay_mielus/",
+          "https://www.tiktok.com/@deejay_mielus",
+          "https://soundcloud.com/emiel-maes-786564150"
+        ]
+      },
+      {
+        "@type": "MusicGroup",
+        "@id": "https://mielus.be/#mielus",
+        "name": "MIELUS",
+        "url": "https://mielus.be",
+        "email": "info@mielus.be",
+        "image": "https://mielus.be/Media/IMG_4040.JPG",
+        "description": "Allround commerciële DJ uit Wichelen. Elke set een eigen verhaal — fuiven, festivals of privé-evenementen.",
+        "genre": ["Commercial", "Pop", "Dance", "Electronic"],
+        "foundingDate": "2022",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Wichelen, België"
+        },
+        "member": { "@id": "https://mielus.be/#emiel" },
+        "sameAs": [
+          "https://www.instagram.com/deejay_mielus/",
+          "https://www.tiktok.com/@deejay_mielus",
+          "https://soundcloud.com/emiel-maes-786564150"
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://mielus.be/#dj-boeking",
+        "name": "DJ Boeking — MIELUS",
+        "provider": { "@id": "https://mielus.be/#emiel" },
+        "description": "Boek MIELUS als DJ voor fuiven, festivals, huwelijken en privé-evenementen in België.",
+        "areaServed": { "@type": "Country", "name": "België" },
+        "serviceType": "DJ Entertainment",
+        "url": "https://mielus.be/#boeken"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://mielus.be/#dj-lessen",
+        "name": "DJ Privélessen — MIELUS",
+        "provider": { "@id": "https://mielus.be/#emiel" },
+        "description": "Privélessen DJ'en voor iedereen, ongeacht leeftijd. Leer mixing, beatmatching en hoe je een publiek leest.",
+        "serviceType": "DJ Lessons",
+        "url": "https://mielus.be/#boeken"
+      },
+      {
+        "@type": "Event",
+        "name": "Fabriek Publiek",
+        "startDate": "2026-06-07",
+        "location": { "@type": "Place", "name": "Schellebelle, België" },
+        "performer": { "@id": "https://mielus.be/#mielus" },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "9duzend340",
+        "startDate": "2026-07-11",
+        "location": { "@type": "Place", "name": "Lede, België" },
+        "performer": { "@id": "https://mielus.be/#mielus" },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Hulst Kermis",
+        "startDate": "2026-07-25",
+        "location": { "@type": "Place", "name": "Wichelen, België" },
+        "performer": { "@id": "https://mielus.be/#mielus" },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Oogststoet",
+        "startDate": "2026-08-02",
+        "location": { "@type": "Place", "name": "Massemen, België" },
+        "performer": { "@id": "https://mielus.be/#mielus" },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Bosfeesten",
+        "startDate": "2026-08-15",
+        "location": { "@type": "Place", "name": "Gijzegem, België" },
+        "performer": { "@id": "https://mielus.be/#mielus" },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "ESVEEKA",
+        "startDate": "2026-08-21",
+        "endDate": "2026-08-22",
+        "location": { "@type": "Place", "name": "Wichelen, België" },
+        "performer": { "@id": "https://mielus.be/#mielus" },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Tabula Rasa",
+        "startDate": "2026-09-12",
+        "location": { "@type": "Place", "name": "Wetteren, België" },
+        "performer": { "@id": "https://mielus.be/#mielus" },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Flos Fever",
+        "startDate": "2026-10-24",
+        "location": { "@type": "Place", "name": "Meerbeke, België" },
+        "performer": { "@id": "https://mielus.be/#mielus" },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ── Fonts ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" as="image" href="Media/IMG_4040.JPG" />
 </head>
 <body>
 
