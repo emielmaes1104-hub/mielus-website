@@ -18,15 +18,17 @@
   <meta property="og:title" content="MIELUS | DJ · Wichelen" />
   <meta property="og:description" content="Boek MIELUS, allround commerciële DJ uit Wichelen. Actief op fuiven, festivals en privé-evenementen in België." />
   <meta property="og:url" content="https://mielus.be/" />
-  <meta property="og:image" content="https://mielus.be/Media/IMG_4040.JPG" />
-  <meta property="og:image:alt" content="MIELUS op het podium — DJ uit Wichelen" />
+  <meta property="og:image" content="https://mielus.be/Media/web/og-mielus.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MIELUS achter de decks in Vooruit Gent" />
   <meta property="og:locale" content="nl_BE" />
 
   <!-- ── Twitter / X Card ── -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="MIELUS | DJ · Wichelen" />
   <meta name="twitter:description" content="Boek MIELUS, allround commerciële DJ uit Wichelen. Fuiven, festivals, privé-events & privélessen." />
-  <meta name="twitter:image" content="https://mielus.be/Media/IMG_4040.JPG" />
+  <meta name="twitter:image" content="https://mielus.be/Media/web/og-mielus.jpg" />
   <meta name="twitter:image:alt" content="MIELUS op het podium" />
 
   <!-- ── Structured Data (JSON-LD) ── -->
@@ -64,13 +66,20 @@
         "email": "info@mielus.be",
         "image": "https://mielus.be/Media/IMG_4040.JPG",
         "description": "Allround commerciële DJ uit Wichelen. Elke set een eigen verhaal — fuiven, festivals of privé-evenementen.",
-        "genre": ["Commercial", "Pop", "Dance", "Electronic"],
+        "genre": [
+          "Commercial",
+          "Pop",
+          "Dance",
+          "Electronic"
+        ],
         "foundingDate": "2022",
         "foundingLocation": {
           "@type": "Place",
           "name": "Wichelen, België"
         },
-        "member": { "@id": "https://mielus.be/#emiel" },
+        "member": {
+          "@id": "https://mielus.be/#emiel"
+        },
         "sameAs": [
           "https://www.instagram.com/deejay_mielus/",
           "https://www.tiktok.com/@deejay_mielus",
@@ -81,9 +90,14 @@
         "@type": "Service",
         "@id": "https://mielus.be/#dj-boeking",
         "name": "DJ Boeking — MIELUS",
-        "provider": { "@id": "https://mielus.be/#emiel" },
+        "provider": {
+          "@id": "https://mielus.be/#emiel"
+        },
         "description": "Boek MIELUS als DJ voor fuiven, festivals, huwelijken en privé-evenementen in België.",
-        "areaServed": { "@type": "Country", "name": "België" },
+        "areaServed": {
+          "@type": "Country",
+          "name": "België"
+        },
         "serviceType": "DJ Entertainment",
         "url": "https://mielus.be/#boeken"
       },
@@ -91,17 +105,332 @@
         "@type": "Service",
         "@id": "https://mielus.be/#dj-lessen",
         "name": "DJ Privélessen — MIELUS",
-        "provider": { "@id": "https://mielus.be/#emiel" },
+        "provider": {
+          "@id": "https://mielus.be/#emiel"
+        },
         "description": "Privélessen DJ'en voor iedereen, ongeacht leeftijd. Leer mixing, beatmatching en hoe je een publiek leest.",
         "serviceType": "DJ Lessons",
         "url": "https://mielus.be/#boeken"
       },
       {
         "@type": "Event",
+        "name": "Nieuwjaarsfuif",
+        "startDate": "2026-01-01",
+        "location": {
+          "@type": "Place",
+          "name": "Wichelen, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Red Carpet Prom",
+        "startDate": "2026-02-06",
+        "location": {
+          "@type": "Place",
+          "name": "Gavere, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Grote Laatste 100-dagenfuif",
+        "startDate": "2026-02-06",
+        "location": {
+          "@type": "Place",
+          "name": "Ikon, Antwerpen, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Dosis X",
+        "startDate": "2026-02-12",
+        "location": {
+          "@type": "Place",
+          "name": "Minus One, Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Light Up The Night",
+        "startDate": "2026-02-13",
+        "location": {
+          "@type": "Place",
+          "name": "Aalter, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Schweinerei",
+        "startDate": "2026-02-21",
+        "location": {
+          "@type": "Place",
+          "name": "Serskamp, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Galabal VEK",
+        "startDate": "2026-03-06",
+        "location": {
+          "@type": "Place",
+          "name": "Eskimofabriek, Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Beachweekend",
+        "startDate": "2026-03-07",
+        "location": {
+          "@type": "Place",
+          "name": "Wuustwezel, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Yucca",
+        "startDate": "2026-03-11",
+        "location": {
+          "@type": "Place",
+          "name": "Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Bal van Sint-Pieters",
+        "startDate": "2026-03-13",
+        "location": {
+          "@type": "Place",
+          "name": "Kokorico, Lievegem, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Grote Laatste 100-dagenfuif",
+        "startDate": "2026-03-14",
+        "location": {
+          "@type": "Place",
+          "name": "Chinastraat, Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Galabal VBK & VLAK",
+        "startDate": "2026-03-19",
+        "location": {
+          "@type": "Place",
+          "name": "Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Juventus Feesten",
+        "startDate": "2026-03-28",
+        "location": {
+          "@type": "Place",
+          "name": "Schoonaarde, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Day N Night",
+        "startDate": "2026-04-04",
+        "location": {
+          "@type": "Place",
+          "name": "Scheldewindeke, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Jincredibles",
+        "startDate": "2026-04-18",
+        "location": {
+          "@type": "Place",
+          "name": "Serskamp, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Cubanight",
+        "startDate": "2026-04-18",
+        "location": {
+          "@type": "Place",
+          "name": "Dilbeek, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Student Street Soccer",
+        "startDate": "2026-04-22",
+        "location": {
+          "@type": "Place",
+          "name": "Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Fishtj'n",
+        "startDate": "2026-04-30",
+        "location": {
+          "@type": "Place",
+          "name": "Aalst, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Kruipkuipfuif",
+        "startDate": "2026-05-01",
+        "location": {
+          "@type": "Place",
+          "name": "Lede, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Vonkskesfuif",
+        "startDate": "2026-05-02",
+        "location": {
+          "@type": "Place",
+          "name": "Serskamp, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Grand Theft Aspi",
+        "startDate": "2026-05-09",
+        "location": {
+          "@type": "Place",
+          "name": "Wichelen, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "MIELUS Invites",
+        "startDate": "2026-05-13",
+        "location": {
+          "@type": "Place",
+          "name": "Charlatan, Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
         "name": "Fabriek Publiek",
         "startDate": "2026-06-07",
-        "location": { "@type": "Place", "name": "Schellebelle, België" },
-        "performer": { "@id": "https://mielus.be/#mielus" },
+        "location": {
+          "@type": "Place",
+          "name": "Schellebelle, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
       },
@@ -109,8 +438,13 @@
         "@type": "Event",
         "name": "9duzend340",
         "startDate": "2026-07-11",
-        "location": { "@type": "Place", "name": "Lede, België" },
-        "performer": { "@id": "https://mielus.be/#mielus" },
+        "location": {
+          "@type": "Place",
+          "name": "Lede, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
       },
@@ -118,8 +452,13 @@
         "@type": "Event",
         "name": "Hulst Kermis",
         "startDate": "2026-07-25",
-        "location": { "@type": "Place", "name": "Wichelen, België" },
-        "performer": { "@id": "https://mielus.be/#mielus" },
+        "location": {
+          "@type": "Place",
+          "name": "Wichelen, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
       },
@@ -127,8 +466,13 @@
         "@type": "Event",
         "name": "Oogststoet",
         "startDate": "2026-08-02",
-        "location": { "@type": "Place", "name": "Massemen, België" },
-        "performer": { "@id": "https://mielus.be/#mielus" },
+        "location": {
+          "@type": "Place",
+          "name": "Massemen, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
       },
@@ -136,8 +480,13 @@
         "@type": "Event",
         "name": "Bosfeesten",
         "startDate": "2026-08-15",
-        "location": { "@type": "Place", "name": "Gijzegem, België" },
-        "performer": { "@id": "https://mielus.be/#mielus" },
+        "location": {
+          "@type": "Place",
+          "name": "Gijzegem, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
       },
@@ -146,17 +495,139 @@
         "name": "ESVEEKA",
         "startDate": "2026-08-21",
         "endDate": "2026-08-22",
-        "location": { "@type": "Place", "name": "Wichelen, België" },
-        "performer": { "@id": "https://mielus.be/#mielus" },
+        "location": {
+          "@type": "Place",
+          "name": "Wichelen, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
       },
       {
         "@type": "Event",
-        "name": "Tabula Rasa",
+        "name": "Wetteren Kermis · De Tent",
+        "startDate": "2026-09-05",
+        "location": {
+          "@type": "Place",
+          "name": "Wetteren, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Project Sjatoo",
         "startDate": "2026-09-12",
-        "location": { "@type": "Place", "name": "Wetteren, België" },
-        "performer": { "@id": "https://mielus.be/#mielus" },
+        "location": {
+          "@type": "Place",
+          "name": "Kalken, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Saharafuif",
+        "startDate": "2026-09-18",
+        "location": {
+          "@type": "Place",
+          "name": "Lede, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Ilke Invites",
+        "startDate": "2026-09-24",
+        "location": {
+          "@type": "Place",
+          "name": "Barbroos, Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Movefest",
+        "startDate": "2026-09-30",
+        "location": {
+          "@type": "Place",
+          "name": "Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Solid Sound",
+        "startDate": "2026-10-03",
+        "location": {
+          "@type": "Place",
+          "name": "Wichelen, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Boatparty VEK",
+        "startDate": "2026-10-07",
+        "location": {
+          "@type": "Place",
+          "name": "Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Druppelkot",
+        "startDate": "2026-10-09",
+        "location": {
+          "@type": "Place",
+          "name": "Serskamp, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Duvelnacht",
+        "startDate": "2026-10-10",
+        "location": {
+          "@type": "Place",
+          "name": "Oosterzele, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
       },
@@ -164,8 +635,83 @@
         "@type": "Event",
         "name": "Flos Fever",
         "startDate": "2026-10-24",
-        "location": { "@type": "Place", "name": "Meerbeke, België" },
-        "performer": { "@id": "https://mielus.be/#mielus" },
+        "location": {
+          "@type": "Place",
+          "name": "Meerbeke, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Nacht van de Jeugdbeweging",
+        "startDate": "2026-10-30",
+        "location": {
+          "@type": "Place",
+          "name": "Aalst, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Openingsfuif VEK",
+        "startDate": "2026-11-03",
+        "location": {
+          "@type": "Place",
+          "name": "Vooruit, Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Jinfection",
+        "startDate": "2026-11-07",
+        "location": {
+          "@type": "Place",
+          "name": "Serskamp, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Galabal Curatio",
+        "startDate": "2026-11-20",
+        "location": {
+          "@type": "Place",
+          "name": "Gent, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+      },
+      {
+        "@type": "Event",
+        "name": "Campagnebal",
+        "startDate": "2026-11-21",
+        "location": {
+          "@type": "Place",
+          "name": "Lede, België"
+        },
+        "performer": {
+          "@id": "https://mielus.be/#mielus"
+        },
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
       }
@@ -183,7 +729,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preload" as="image" href="Media/IMG_4040.JPG" />
+  <link rel="preload" as="image" href="Media/albums/openingsfuif-vek-2026/01.jpg" />
 </head>
 <body>
 
@@ -194,6 +740,7 @@
       <ul class="nav-links">
         <li><a class="nav-link" href="#over" data-page="over">Over</a></li>
         <li><a class="nav-link" href="#evenementen" data-page="evenementen">Evenementen</a></li>
+        <li><a class="nav-link" href="#fotos" data-page="fotos">Foto's</a></li>
         <li><a class="nav-link" href="#mix" data-page="mix">Mix</a></li>
         <li><a class="nav-link" href="#boeken" data-page="boeken">Booken</a></li>
         <li><a class="nav-link" href="#samenwerking" data-page="samenwerking">Samenwerking</a></li>
@@ -208,6 +755,7 @@
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
       <a class="nav-link" href="#over" data-page="over">Over</a>
       <a class="nav-link" href="#evenementen" data-page="evenementen">Evenementen</a>
+      <a class="nav-link" href="#fotos" data-page="fotos">Foto's</a>
       <a class="nav-link" href="#mix" data-page="mix">Mix</a>
       <a class="nav-link" href="#boeken" data-page="boeken">Booken</a>
       <a class="nav-link" href="#samenwerking" data-page="samenwerking">Samenwerking</a>
@@ -244,6 +792,19 @@
         </div>
       </div>
     </div>
+
+    <!-- Volgend optreden (gevuld door app.js) -->
+    <section class="next-gig" id="next-gig" hidden>
+      <div class="container">
+        <a class="next-gig-inner" href="#evenementen" data-page="evenementen">
+          <span class="next-gig-label"><span class="next-gig-dot" aria-hidden="true"></span>Volgende optreden</span>
+          <span class="next-gig-date" id="next-gig-date"></span>
+          <span class="next-gig-name" id="next-gig-name"></span>
+          <span class="next-gig-place" id="next-gig-place"></span>
+          <span class="next-gig-cta">Volledige agenda →</span>
+        </a>
+      </div>
+    </section>
 
     <!-- Features -->
     <section class="features-section">
@@ -302,7 +863,8 @@
         <div class="media-mosaic">
 
           <div class="mosaic-cell mosaic-cell--wide animate-in">
-            <img src="Media/IMG_4040.JPG" alt="MIELUS op het festival met crowd" />
+            <img src="Media/albums/openingsfuif-vek-2026/01.jpg" alt="MIELUS achter de decks onder de lichtshow in Vooruit Gent" />
+            <div class="mosaic-badge mosaic-badge--place" aria-hidden="true">Vooruit · Gent</div>
           </div>
 
           <div class="mosaic-cell animate-in" data-delay="100">
@@ -316,9 +878,13 @@
           </div>
 
           <div class="mosaic-cell animate-in" data-delay="200">
-            <img src="Media/6A152695-145C-4C93-AF19-ADC947CD69E3.JPG" alt="Crowd sfeer tijdens een MIELUS set" loading="lazy" />
+            <img src="Media/albums/openingsfuif-vek-2026/07-sm.jpg" alt="Zicht over de schouder van MIELUS op een volle zaal" loading="lazy" />
           </div>
 
+        </div>
+
+        <div class="media-more animate-in">
+          <a class="btn-secondary" href="#fotos" data-page="fotos">Bekijk alle foto's →</a>
         </div>
       </div>
     </section>
@@ -338,7 +904,7 @@
             Instagram
           </a>
 
-          <a class="social-link" href="#" target="_blank" rel="noopener" aria-label="TikTok">
+          <a class="social-link" href="https://www.tiktok.com/@deejay_mielus" target="_blank" rel="noopener" aria-label="TikTok">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
             </svg>
@@ -418,6 +984,18 @@
 
       <hr class="divider" />
 
+      <div class="played-block animate-in">
+        <span class="media-eyebrow">Gespeeld op</span>
+        <h2 class="section-title">Een greep uit de podia</h2>
+        <ul class="played-wall">
+          <li>Vooruit Gent</li><li>Flos Fever</li><li>ESVEEKA</li><li>Nacht van de Jeugdbeweging</li>
+          <li>Movefest</li><li>Bosfeesten</li><li>Tabula Rasa</li><li>9duzend340</li><li>Fabriek Publiek</li>
+          <li>Duvelnacht</li><li>Boatparty VEK</li><li>Oogststoet</li><li>Hulst Kermis</li>
+        </ul>
+      </div>
+
+      <hr class="divider" />
+
       <div class="lessons-block animate-in">
         <div class="lessons-text">
           <h2 class="section-title">Leren draaien?</h2>
@@ -437,187 +1015,79 @@
     <div class="page-hero">
       <div class="container">
         <h1 class="page-hero-title animate-hero">Waar vind je MIELUS?</h1>
-        <p class="page-hero-sub animate-hero">Hieronder vind je de aankomende evenementen. Volg ook de socials voor de meest actuele updates.</p>
+        <p class="page-hero-sub animate-hero">Hier vind je de komende optredens. Privéfeesten staan er niet altijd bij, volg de socials voor de laatste updates.</p>
       </div>
     </div>
 
     <div class="container">
 
-      <div class="events-grid animate-in">
+      <h2 class="events-heading animate-in">Komende optredens</h2>
+      <div class="events-grid animate-in" id="events-upcoming">
+        <noscript><p class="events-coming">Bekijk de agenda op <a href="https://www.instagram.com/deejay_mielus/">Instagram</a>.</p></noscript>
+      </div>
 
-        <div class="event-card">
-          <div class="event-date">
-            <span class="event-day">7</span>
-            <span class="event-month">JUN</span>
-            <span class="event-year">2026</span>
+      <div class="events-archive animate-in">
+        <span class="media-eyebrow">Archief</span>
+        <h2 class="section-title">Waar MIELUS al stond</h2>
+        <p class="archive-stats" id="archive-stats"></p>
+
+        <div class="archive-tabs" id="archive-tabs" role="tablist" aria-label="Kies een jaar"></div>
+
+        <div class="map-wrap">
+          <div class="gig-map" id="gig-map">
+            <svg id="gig-svg" viewBox="0 0 1000 671" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Kaart met alle gemeentes waar MIELUS speelde">
+              <image href="Media/kaart-regio.svg" x="0" y="0" width="1000" height="671" />
+              <g id="gig-dots"></g>
+            </svg>
+            <div class="map-zoom" role="group" aria-label="Kaartweergave">
+              <button type="button" data-view="alles" aria-pressed="true">Heel Vlaanderen</button>
+              <button type="button" data-view="regio" aria-pressed="false">Thuisbasis</button>
+            </div>
+            <div class="map-tooltip" id="map-tooltip" hidden></div>
           </div>
-          <div class="event-info">
-            <h3 class="event-name">Fabriek Publiek</h3>
-            <p class="event-location">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              Schellebelle
-            </p>
-          </div>
-          <div class="event-badges">
-            <span class="badge badge--event">Open-event</span>
-          </div>
+          <p class="map-hint">Ga met je muis over een bolletje (of tik erop) om te zien wat er speelde. Hoe groter het bolletje, hoe vaker.</p>
         </div>
 
-        <div class="event-card">
-          <div class="event-date">
-            <span class="event-day">11</span>
-            <span class="event-month">JUL</span>
-            <span class="event-year">2026</span>
-          </div>
-          <div class="event-info">
-            <h3 class="event-name">9duzend340</h3>
-            <p class="event-location">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              Lede
-            </p>
-          </div>
-          <div class="event-badges">
-            <span class="badge badge--event">Open-event</span>
-          </div>
-        </div>
-
-        <div class="event-card">
-          <div class="event-date">
-            <span class="event-day">25</span>
-            <span class="event-month">JUL</span>
-            <span class="event-year">2026</span>
-          </div>
-          <div class="event-info">
-            <h3 class="event-name">Hulst Kermis</h3>
-            <p class="event-location">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              Wichelen
-            </p>
-          </div>
-          <div class="event-badges">
-            <span class="badge badge--event">Open-event</span>
-          </div>
-        </div>
-
-        <div class="event-card">
-          <div class="event-date">
-            <span class="event-day">2</span>
-            <span class="event-month">AUG</span>
-            <span class="event-year">2026</span>
-          </div>
-          <div class="event-info">
-            <h3 class="event-name">Oogststoet</h3>
-            <p class="event-location">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              Massemen
-            </p>
-          </div>
-          <div class="event-badges">
-            <span class="badge badge--event">Open-event</span>
-          </div>
-        </div>
-
-        <div class="event-card">
-          <div class="event-date">
-            <span class="event-day">15</span>
-            <span class="event-month">AUG</span>
-            <span class="event-year">2026</span>
-          </div>
-          <div class="event-info">
-            <h3 class="event-name">Bosfeesten</h3>
-            <p class="event-location">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              Gijzegem
-            </p>
-          </div>
-          <div class="event-badges">
-            <span class="badge badge--event">Open-event</span>
-          </div>
-        </div>
-
-        <div class="event-card">
-          <div class="event-date">
-            <span class="event-day">21–22</span>
-            <span class="event-month">AUG</span>
-            <span class="event-year">2026</span>
-          </div>
-          <div class="event-info">
-            <h3 class="event-name">ESVEEKA</h3>
-            <p class="event-location">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              Wichelen
-            </p>
-          </div>
-          <div class="event-badges">
-            <span class="badge badge--event">Open-event</span>
-          </div>
-        </div>
-
-        <div class="event-card">
-          <div class="event-date">
-            <span class="event-day">12</span>
-            <span class="event-month">SEP</span>
-            <span class="event-year">2026</span>
-          </div>
-          <div class="event-info">
-            <h3 class="event-name">Tabula Rasa</h3>
-            <p class="event-location">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              Wetteren
-            </p>
-          </div>
-          <div class="event-badges">
-            <span class="badge badge--event">Open-event</span>
-          </div>
-        </div>
-
-        <div class="event-card">
-          <div class="event-date">
-            <span class="event-day">24</span>
-            <span class="event-month">OKT</span>
-            <span class="event-year">2026</span>
-          </div>
-          <div class="event-info">
-            <h3 class="event-name">Flos Fever</h3>
-            <p class="event-location">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              Meerbeke
-            </p>
-          </div>
-          <div class="event-badges">
-            <span class="badge badge--event">Open-event</span>
-          </div>
-        </div>
-
+        <ul class="past-list" id="events-past"></ul>
       </div>
 
     </div>
 
   </section><!-- /page-evenementen -->
+
+  <!-- ===================== PAGE: FOTO'S ===================== -->
+  <section id="page-fotos" class="page">
+
+    <div class="page-hero">
+      <div class="container">
+        <h1 class="page-hero-title animate-hero">Foto's</h1>
+        <p class="page-hero-sub animate-hero">Zo ziet het eruit vanop het podium. Kies een event en klik op een foto om ze groot te bekijken.</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="album-overview" id="album-overview">
+        <div class="album-grid" id="album-grid"></div>
+      </div>
+
+      <div class="album-view" id="album-view" hidden>
+        <a class="album-back" href="#fotos" data-page="fotos">← Alle albums</a>
+        <div class="gallery-head">
+          <span class="media-eyebrow" id="album-meta"></span>
+          <h2 class="section-title" id="album-title"></h2>
+        </div>
+        <div class="album-photos" id="album-photos"></div>
+      </div>
+
+      <div class="mix-ctas animate-in">
+        <a class="btn-primary" href="#boeken" data-page="boeken">Dit ook op jouw fuif? Book MIELUS</a>
+        <a class="btn-secondary" href="https://www.instagram.com/deejay_mielus/" target="_blank" rel="noopener">Meer op Instagram →</a>
+      </div>
+
+    </div>
+
+  </section><!-- /page-fotos -->
 
   <!-- ===================== PAGE: MIX ===================== -->
   <section id="page-mix" class="page">
@@ -941,8 +1411,9 @@
         <nav class="footer-nav" aria-label="Footer navigatie">
           <a href="#over" data-page="over">Over</a>
           <a href="#evenementen" data-page="evenementen">Evenementen</a>
+          <a href="#fotos" data-page="fotos">Foto's</a>
           <a href="#mix" data-page="mix">Mix</a>
-          <a href="#boeken" data-page="booken">Booken</a>
+          <a href="#boeken" data-page="boeken">Booken</a>
           <a href="#samenwerking" data-page="samenwerking">Samenwerking</a>
         </nav>
 
@@ -954,7 +1425,7 @@
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
           </a>
-          <a href="#" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
+          <a href="https://www.tiktok.com/@deejay_mielus" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
             </svg>
@@ -973,6 +1444,15 @@
     </div>
   </footer>
 
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Foto bekijken">
+    <button class="lightbox-btn lightbox-close" type="button" aria-label="Sluiten">×</button>
+    <button class="lightbox-btn lightbox-prev" type="button" aria-label="Vorige foto">‹</button>
+    <img class="lightbox-img" id="lightbox-img" alt="" />
+    <button class="lightbox-btn lightbox-next" type="button" aria-label="Volgende foto">›</button>
+  </div>
+
+  <script src="events.js"></script>
+  <script src="albums.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
