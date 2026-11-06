@@ -517,11 +517,15 @@ async function submitForm(form, successEl) {
   submitBtn.disabled = true;
   submitBtn.textContent = 'Versturen…';
 
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 15000);
+
   try {
     const response = await fetch(form.action, {
       method: 'POST',
       body: new FormData(form),
       headers: { Accept: 'application/json' },
+      signal: controller.signal,
     });
 
     const data = await response.json().catch(() => ({}));
@@ -545,10 +549,27 @@ async function submitForm(form, successEl) {
       errorEl.className = 'form-error';
       submitBtn.insertAdjacentElement('afterend', errorEl);
     }
-    errorEl.textContent = err.message === 'activation'
-      ? 'Formulier nog niet geactiveerd. Check de bevestigingsmail in info@mielus.be en klik op de link.'
-      : 'Er ging iets mis. Probeer opnieuw of mail naar info@mielus.be';
+    if (err.message === 'activation') {
+      errorEl.textContent = 'Formulier nog niet geactiveerd. Check de bevestigingsmail in info@mielus.be en klik op de link.';
+    } else {
+      // Valt de formulierdienst uit, dan gaat de aanvraag niet verloren: alles staat klaar in een mail.
+      errorEl.textContent = 'Het formulier is even niet bereikbaar. Je gegevens blijven staan. Stuur je aanvraag hier via mail naar info@mielus.be: ';
+      const link = document.createElement('a');
+      link.href = mailLink(form);
+      link.textContent = 'Open mail met je aanvraag';
+      errorEl.appendChild(link);
+    }
+  } finally {
+    clearTimeout(timeout);
   }
+}
+
+function mailLink(form) {
+  const regels = [...new FormData(form).entries()]
+    .filter(([naam, waarde]) => !naam.startsWith('_') && String(waarde).trim())
+    .map(([naam, waarde]) => `${naam}: ${waarde}`);
+  const onderwerp = form.querySelector('[name="_subject"]').value;
+  return `mailto:info@mielus.be?subject=${encodeURIComponent(onderwerp)}&body=${encodeURIComponent(regels.join('\n'))}`;
 }
 
 function initFormHandling() {
