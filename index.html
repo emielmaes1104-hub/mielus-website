@@ -1197,18 +1197,21 @@
               <label for="type">Type aanvraag *</label>
               <select id="type" name="type" required>
                 <option value="" disabled selected>Kies een type</option>
-                <option value="fuif">Fuif</option>
-                <option value="festival">Festival</option>
-                <option value="prive-evenement">Privé-evenement</option>
-                <option value="priveles">Privéles</option>
-                <option value="andere">Andere</option>
+                <option value="Fuif">Fuif</option>
+                <option value="Galabal of schoolfeest">Galabal of schoolfeest</option>
+                <option value="Festival">Festival</option>
+                <option value="Club of café">Club of café</option>
+                <option value="Bedrijfsevent">Bedrijfsevent</option>
+                <option value="Trouw of privéfeest">Trouw of privéfeest</option>
+                <option value="Privéles">Privéles</option>
+                <option value="Andere">Andere</option>
               </select>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="datum">Datum van het evenement *</label>
+              <label for="datum">Datum *</label>
               <input type="date" id="datum" name="datum" required />
             </div>
             <div class="form-group">
@@ -1217,16 +1220,81 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="aanwezigen">Verwacht aantal aanwezigen</label>
-            <select id="aanwezigen" name="aanwezigen">
-              <option value="" disabled selected>Optioneel</option>
-              <option value="<50">Minder dan 50</option>
-              <option value="50-200">50 – 200</option>
-              <option value="200-500">200 – 500</option>
-              <option value="500+">Meer dan 500</option>
-            </select>
-          </div>
+          <fieldset id="event-velden" class="form-fieldset">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="organisator">Wie organiseert? *</label>
+                <select id="organisator" name="organisator" required>
+                  <option value="" disabled selected>Kies een organisator</option>
+                  <option value="Jeugdbeweging of jeugdhuis">Jeugdbeweging of jeugdhuis</option>
+                  <option value="Studentenclub of school">Studentenclub of school</option>
+                  <option value="Club of festival">Club of festival</option>
+                  <option value="Horeca">Horeca</option>
+                  <option value="Bedrijf">Bedrijf</option>
+                  <option value="Particulier">Particulier</option>
+                  <option value="Andere vereniging">Andere vereniging</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="organisatie">Naam organisatie of event</label>
+                <input type="text" id="organisatie" name="organisatie" placeholder="Optioneel" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="setduur">Gewenste setduur *</label>
+                <select id="setduur" name="setduur" required>
+                  <option value="" disabled selected>Kies een duur</option>
+                  <option value="1 uur">1 uur</option>
+                  <option value="1u30">1u30</option>
+                  <option value="2 uur">2 uur</option>
+                  <option value="Langer dan 2 uur">Langer dan 2 uur</option>
+                  <option value="Hele avond">Hele avond</option>
+                  <option value="Weet ik nog niet">Weet ik nog niet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="startuur">Startuur van de set</label>
+                <input type="text" id="startuur" name="startuur" placeholder="Bijv. 23u30" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="aanwezigen">Verwacht aantal aanwezigen</label>
+                <select id="aanwezigen" name="aanwezigen">
+                  <option value="" disabled selected>Optioneel</option>
+                  <option value="<50">Minder dan 50</option>
+                  <option value="50-200">50 – 200</option>
+                  <option value="200-500">200 – 500</option>
+                  <option value="500+">Meer dan 500</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dj_materiaal">DJ-materiaal aanwezig?</label>
+                <select id="dj_materiaal" name="dj_materiaal">
+                  <option value="" disabled selected>Optioneel</option>
+                  <option value="Ja">Ja, staat er al</option>
+                  <option value="Nee">Nee, nog te regelen</option>
+                  <option value="Weet ik nog niet">Weet ik nog niet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Richtbudget voor de DJ</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>Optioneel</option>
+                <option value="Tot €200">Tot €200</option>
+                <option value="€200 tot €300">€200 tot €300</option>
+                <option value="€300 tot €500">€300 tot €500</option>
+                <option value="Meer dan €500">Meer dan €500</option>
+                <option value="Nog geen idee">Nog geen idee</option>
+              </select>
+              <small class="form-hint">Zo krijg je meteen een voorstel dat bij jullie past.</small>
+            </div>
+          </fieldset>
 
           <div class="form-group">
             <label for="bericht">Extra info / bericht</label>

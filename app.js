@@ -508,6 +508,8 @@ function initMobileMenu() {
 }
 
 async function submitForm(form, successEl) {
+  if (!form.reportValidity()) return;
+
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
   let errorEl = form.querySelector('.form-error');
@@ -525,7 +527,7 @@ async function submitForm(form, successEl) {
     const data = await response.json().catch(() => ({}));
 
     if (data.success === 'true' || data.success === true) {
-      form.hidden = true;
+      form.classList.add('is-verstuurd');
       if (successEl) {
         successEl.removeAttribute('hidden');
         successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -552,6 +554,20 @@ async function submitForm(form, successEl) {
 function initFormHandling() {
   const bookingForm = document.getElementById('booking-form');
   if (bookingForm) {
+    const type = document.getElementById('type');
+    const eventVelden = document.getElementById('event-velden');
+    const datum = document.getElementById('datum');
+
+    // Deze velden gaan over een optreden, dus niet tonen (of verplichten) bij een privéles.
+    type.addEventListener('change', () => {
+      const isLes = type.value === 'Privéles';
+      eventVelden.hidden = isLes;
+      eventVelden.disabled = isLes;
+    });
+
+    const nu = new Date();
+    datum.min = `${nu.getFullYear()}-${String(nu.getMonth() + 1).padStart(2, '0')}-${String(nu.getDate()).padStart(2, '0')}`;
+
     bookingForm.addEventListener('submit', e => {
       e.preventDefault();
       submitForm(bookingForm, document.getElementById('form-success'));

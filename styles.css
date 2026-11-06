@@ -843,6 +843,22 @@ input:focus, select:focus, textarea:focus {
 
 textarea { resize: vertical; min-height: 120px; }
 
+/* Na versturen: enkel de bevestiging blijft staan (die zit in het formulier) */
+.booking-form.is-verstuurd > :not(.form-success) { display: none; }
+
+.form-fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.form-fieldset[hidden] { display: none; }
+
+.form-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
 .form-success {
   display: flex;
   align-items: flex-start;
