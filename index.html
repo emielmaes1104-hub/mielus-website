@@ -922,6 +922,17 @@
       </div>
     </section>
 
+    <section class="lijst-band" data-lijst>
+      <div class="container lijst-band-inner">
+        <div>
+          <p class="lijst-label">Organiseer je iets?</p>
+          <h2 class="section-title">10% op je eerste boeking</h2>
+          <p class="lijst-tekst">Vraag je persoonlijke code aan en boek MIELUS voor je volgende fuif, galabal of feest.</p>
+        </div>
+        <a class="btn-primary btn-lg" href="#boeken" data-page="boeken">Vraag je code aan</a>
+      </div>
+    </section>
+
   </section><!-- /page-home -->
 
   <!-- ===================== PAGE: OVER ===================== -->
@@ -1301,6 +1312,18 @@
             <textarea id="bericht" name="bericht" rows="4" placeholder="Vertel wat meer over jouw evenement..."></textarea>
           </div>
 
+          <div class="form-row" data-lijst>
+            <div class="form-group">
+              <label for="kortingscode">Kortingscode</label>
+              <input type="text" id="kortingscode" name="kortingscode" placeholder="Optioneel" autocomplete="off" maxlength="32" />
+            </div>
+          </div>
+
+          <label class="form-check" data-lijst>
+            <input type="checkbox" name="nieuwsbrief" value="ja" />
+            <span>Ja, stuur me ook vrije data en acties van MIELUS per mail. Uitschrijven kan altijd.</span>
+          </label>
+
           <button type="submit" class="btn-primary btn-lg btn-full">Verstuur aanvraag</button>
 
           <div id="form-success" class="form-success" hidden>
@@ -1314,6 +1337,41 @@
         </form>
 
         <!-- Contact sidebar -->
+        <div class="booking-kant">
+        <form id="lijst-form" class="lijst-kaart booking-form" data-lijst novalidate>
+          <p class="lijst-label">Nieuwe klant?</p>
+          <h3>10% op je eerste boeking</h3>
+          <p class="lijst-tekst">Laat je mailadres achter en ontvang je persoonlijke code.</p>
+          <input type="text" name="website" class="lijst-val" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="form-group">
+            <label for="lijst-voornaam">Voornaam *</label>
+            <input type="text" id="lijst-voornaam" name="voornaam" required maxlength="60" autocomplete="given-name" />
+          </div>
+          <div class="form-group">
+            <label for="lijst-email">E-mailadres *</label>
+            <input type="email" id="lijst-email" name="email" required maxlength="254" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="lijst-organisator">Wie organiseert? *</label>
+            <select id="lijst-organisator" name="organisator" required>
+              <option value="" disabled selected>Kies</option>
+              <option>Jeugdbeweging of jeugdhuis</option>
+              <option>Studentenclub of school</option>
+              <option>Club of festival</option>
+              <option>Horeca</option>
+              <option>Bedrijf</option>
+              <option>Particulier</option>
+              <option>Andere vereniging</option>
+            </select>
+          </div>
+          <label class="form-check">
+            <input type="checkbox" name="nieuwsbrief" />
+            <span>Ja, stuur me ook vrije data en acties van MIELUS per mail. Uitschrijven kan altijd.</span>
+          </label>
+          <button type="submit" class="btn-primary btn-full">Stuur mijn code</button>
+          <p class="form-hint">Je krijgt de code ook zonder dat vakje. Eerst bevestig je je mailadres. <a href="#privacy" data-page="privacy">Voorwaarden en privacy</a></p>
+          <p class="lijst-melding" role="status" hidden></p>
+        </form>
         <div class="booking-contact animate-in" data-delay="150">
           <h3>Direct contact</h3>
           <a href="mailto:info@mielus.be" class="contact-item">
@@ -1332,11 +1390,54 @@
             @deejay_mielus
           </a>
         </div>
+        </div>
 
       </div>
     </div>
 
   </section><!-- /page-boeken -->
+
+  <!-- ===================== PAGE: PRIVACY ===================== -->
+  <section id="page-privacy" class="page">
+    <div class="page-hero">
+      <div class="container">
+        <h1 class="page-hero-title animate-hero">Privacy en voorwaarden</h1>
+      </div>
+    </div>
+    <div class="container tekstpagina">
+      <h2>Wie zijn we</h2>
+      <p>MIELUS is de artiestennaam van Emiel Maes, Roelandtstraat 5a, 9260 Wichelen, België. Ondernemingsnummer 1031.182.551. Bereikbaar via info@mielus.be. Emiel Maes is verantwoordelijk voor de verwerking van je gegevens.</p>
+
+      <h2>Actievoorwaarden: 10% op je eerste boeking</h2>
+      <ul>
+        <li>De korting is 10% op de artiestenfee, zonder vervoerskosten.</li>
+        <li>De actie geldt enkel voor een eerste boeking van een nieuwe klant, dus niet als jouw organisatie MIELUS al boekte.</li>
+        <li>Per persoon en per organisatie kan je de code één keer gebruiken. De code is persoonlijk en hoort bij je mailadres.</li>
+        <li>De code is 6 maanden geldig, moet bij je aanvraag vermeld worden en werkt niet op een lopende offerte of ondertekend contract.</li>
+        <li>De korting geldt niet op feestdagen (24, 25, 31 december en 1 januari) en is niet te combineren met andere kortingen.</li>
+        <li>Een boeking hangt af van de beschikbaarheid. De code geeft geen recht op een datum en is niet inwisselbaar voor geld.</li>
+        <li>Je krijgt de code ook als je je niet inschrijft op de Bookerslijst.</li>
+        <li>Bij misbruik vervalt de code. MIELUS kan deze actie stopzetten; gegeven codes blijven dan geldig tot hun einddatum.</li>
+      </ul>
+
+      <h2>Welke gegevens en waarvoor</h2>
+      <ul>
+        <li><strong>Kortingscode:</strong> voornaam, mailadres, type organisator, code en einddatum. Nodig om je de code te bezorgen en misbruik te vermijden. We bewaren dit tot 12 maanden na je aanvraag.</li>
+        <li><strong>Bookerslijst:</strong> dezelfde gegevens, plus het tijdstip en de tekst van je toestemming. Enkel als je het vakje aanvinkt en bevestigt, ontvang je mails over vrije data en acties. We bewaren dit tot je je uitschrijft, en verwijderen het na 24 maanden zonder enige reactie. Je kan je toestemming altijd intrekken via de link in elke mail of via info@mielus.be. Dat heeft geen gevolg voor je korting.</li>
+        <li><strong>Boekingsaanvraag:</strong> de gegevens uit het formulier, om je aanvraag te beantwoorden en een eventuele boeking uit te voeren. Facturen bewaren we zo lang als de wet het oplegt.</li>
+      </ul>
+
+      <h2>Wie helpt ons</h2>
+      <p>We verkopen je gegevens nooit. We gebruiken Brevo (mails en contactlijst, EU), Vercel (website, VS), Combell (mailbox), Dexxter (boekhouding) en FormSubmit (reserveroute voor het formulier, VS). De site laadt lettertypes van Google en haalt volgersaantallen op via allorigins, waardoor je IP-adres bij die diensten terechtkan.</p>
+
+      <h2>Cookies</h2>
+      <p>We gebruiken geen tracking- of reclamecookies. In je browser bewaren we enkel tijdelijk de volgersaantallen, zodat de site sneller laadt.</p>
+
+      <h2>Jouw rechten</h2>
+      <p>Je kan je gegevens inkijken, laten verbeteren of verwijderen, en je kan bezwaar maken of je toestemming intrekken via info@mielus.be. Een klacht kan je indienen bij de Gegevensbeschermingsautoriteit, Drukpersstraat 35, 1000 Brussel, gegevensbeschermingsautoriteit.be.</p>
+      <p class="form-hint">Laatst bijgewerkt op 6 november 2026.</p>
+    </div>
+  </section>
 
   <!-- ===================== PAGE: SAMENWERKING ===================== -->
   <section id="page-samenwerking" class="page">
@@ -1507,7 +1608,7 @@
 
       </div>
       <div class="footer-bottom">
-        <p>© 2026 MIELUS · Emiel Maes</p>
+        <p>© 2026 MIELUS · Emiel Maes · KBO 1031.182.551 · <a href="#privacy" data-page="privacy">Privacy en voorwaarden</a></p>
       </div>
     </div>
   </footer>

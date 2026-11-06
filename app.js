@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', init);
 
-const VALID_PAGES = ['home', 'over', 'evenementen', 'fotos', 'mix', 'boeken', 'samenwerking'];
+const VALID_PAGES = ['home', 'over', 'evenementen', 'fotos', 'mix', 'boeken', 'samenwerking', 'privacy'];
 
 /* ===== AGENDA (data in events.js) ===== */
 const MONTHS = ['JAN', 'FEB', 'MRT', 'APR', 'MEI', 'JUN', 'JUL', 'AUG', 'SEP', 'OKT', 'NOV', 'DEC'];
@@ -521,10 +521,11 @@ async function submitForm(form, successEl) {
   const timeout = setTimeout(() => controller.abort(), 15000);
 
   try {
+    const viaEigenApi = new URL(form.action).pathname === '/api/aanvraag';
     const response = await fetch(form.action, {
       method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' },
+      body: viaEigenApi ? JSON.stringify(Object.fromEntries(new FormData(form))) : new FormData(form),
+      headers: viaEigenApi ? { Accept: 'application/json', 'Content-Type': 'application/json' } : { Accept: 'application/json' },
       signal: controller.signal,
     });
 
@@ -562,6 +563,57 @@ async function submitForm(form, successEl) {
   } finally {
     clearTimeout(timeout);
   }
+}
+
+// De actie verschijnt pas als de server klaar is. Tot dan blijft de site werken zoals voorheen.
+async function initBookerslijst() {
+  const form = document.getElementById('lijst-form');
+  if (!form) return;
+  const start = Date.now();
+
+  try {
+    const response = await fetch('/api/status', { headers: { Accept: 'application/json' } });
+    const data = await response.json();
+    if (data.actief !== true) return;
+  } catch { return; }
+
+  document.documentElement.classList.add('lijst-actief');
+  document.querySelectorAll('#booking-form, #collab-form').forEach(f => { f.action = '/api/aanvraag'; });
+
+  const melding = form.querySelector('.lijst-melding');
+  const knop = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    knop.disabled = true;
+    melding.hidden = true;
+    const velden = new FormData(form);
+    try {
+      const response = await fetch('/api/korting', {
+        method: 'POST',
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          voornaam: velden.get('voornaam'),
+          email: velden.get('email'),
+          organisator: velden.get('organisator'),
+          website: velden.get('website'),
+          nieuwsbrief: form.elements.nieuwsbrief.checked,
+          start,
+        }),
+      });
+      if (response.status === 429) throw new Error('limiet');
+      if (!response.ok) throw new Error('fout');
+      form.reset();
+      melding.textContent = 'Bijna klaar! Check je mailbox en bevestig je mailadres, dan krijg je je code.';
+    } catch (err) {
+      knop.disabled = false;
+      melding.textContent = err.message === 'limiet'
+        ? 'Even wachten voor je opnieuw probeert.'
+        : 'Dat lukte niet. Kijk je mailadres na of probeer het later opnieuw.';
+    }
+    melding.hidden = false;
+  });
 }
 
 function mailLink(form) {
@@ -622,6 +674,7 @@ function init() {
   initNavLinks();
   initMobileMenu();
   initFormHandling();
+  initBookerslijst();
   renderEvents();
   initArchiveTabs();
   initLightbox();

@@ -1811,3 +1811,65 @@ textarea { resize: vertical; min-height: 120px; }
   .soundcloud-placeholder { padding: 56px 24px; }
   .hero-ticker span { font-size: 0.75rem; }
 }
+
+/* ===== KORTINGSCODE EN BOOKERSLIJST ===== */
+/* Blijft verborgen tot /api/status bevestigt dat alles geconfigureerd is. */
+[data-lijst] { display: none !important; }
+.lijst-actief .lijst-band[data-lijst] { display: block !important; }
+.lijst-actief .form-row[data-lijst] { display: grid !important; grid-template-columns: 1fr 1fr; gap: 20px; }
+.lijst-actief .form-check[data-lijst] { display: flex !important; }
+.lijst-actief .lijst-kaart[data-lijst] { display: block !important; }
+
+.booking-kant { display: flex; flex-direction: column; gap: 24px; }
+.lijst-kaart { padding: 28px; border-color: var(--border-blue); }
+.lijst-kaart h3 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+.lijst-label {
+  color: var(--blue-light);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+.lijst-tekst { color: var(--text-muted); font-size: 0.92rem; margin: 0 0 20px; }
+.lijst-val { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.lijst-kaart .form-hint { display: block; margin: 12px 0 0; }
+.lijst-kaart .form-hint a, .footer-bottom a { color: var(--text-muted); text-decoration: underline; }
+.lijst-melding { font-size: 0.86rem; color: var(--blue-light); margin: 14px 0 0; }
+.form-check {
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.45;
+  text-transform: none;
+  color: var(--text-muted);
+}
+.form-check input { width: 18px; height: 18px; flex: 0 0 18px; padding: 0; margin: 1px 0 0; -webkit-appearance: checkbox; appearance: checkbox; accent-color: var(--blue); }
+.lijst-kaart .form-check { display: flex; }
+
+.lijst-band { padding: 56px 0; border-top: 1px solid var(--border); }
+.lijst-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.lijst-band .section-title { margin-bottom: 8px; }
+.lijst-band .lijst-tekst { margin: 0; }
+
+.tekstpagina { max-width: 760px; padding-top: 40px; padding-bottom: 80px; color: var(--text-muted); line-height: 1.7; }
+.tekstpagina h2 { color: var(--text); font-family: var(--font-display); font-size: 1.6rem; margin: 36px 0 12px; }
+.tekstpagina ul { padding-left: 20px; }
+.tekstpagina li { margin-bottom: 8px; }
+.tekstpagina strong { color: var(--text); }
+
+@media (max-width: 760px) {
+  .lijst-band-inner { flex-direction: column; align-items: flex-start; }
+  .lijst-actief .form-row[data-lijst] { grid-template-columns: 1fr; }
+}
+
+.booking-kant .booking-contact { position: static; }
