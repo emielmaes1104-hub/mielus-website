@@ -510,9 +510,15 @@ function initMobileMenu() {
 async function submitForm(form, successEl) {
   if (!form.reportValidity()) return;
 
+  // Zolang de eigen route niet actief is, gaat de aanvraag rechtstreeks via mail.
+  if (new URL(form.action).pathname !== '/api/aanvraag') {
+    toonMailRoute(form, 'Je aanvraag staat klaar in een mail, je hoeft ze enkel nog te versturen. ');
+    window.location.href = mailLink(form);
+    return;
+  }
+
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
-  let errorEl = form.querySelector('.form-error');
 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Versturen…';
@@ -545,21 +551,8 @@ async function submitForm(form, successEl) {
     submitBtn.disabled = false;
     submitBtn.textContent = originalText;
 
-    if (!errorEl) {
-      errorEl = document.createElement('p');
-      errorEl.className = 'form-error';
-      submitBtn.insertAdjacentElement('afterend', errorEl);
-    }
-    if (err.message === 'activation') {
-      errorEl.textContent = 'Formulier nog niet geactiveerd. Check de bevestigingsmail in info@mielus.be en klik op de link.';
-    } else {
-      // Valt de formulierdienst uit, dan gaat de aanvraag niet verloren: alles staat klaar in een mail.
-      errorEl.textContent = 'Het formulier is even niet bereikbaar. Je gegevens blijven staan. Stuur je aanvraag hier via mail naar info@mielus.be: ';
-      const link = document.createElement('a');
-      link.href = mailLink(form);
-      link.textContent = 'Open mail met je aanvraag';
-      errorEl.appendChild(link);
-    }
+    // Valt de formulierdienst uit, dan gaat de aanvraag niet verloren: alles staat klaar in een mail.
+    toonMailRoute(form, 'Het formulier is even niet bereikbaar. Je gegevens blijven staan. ');
   } finally {
     clearTimeout(timeout);
   }
@@ -614,6 +607,21 @@ async function initBookerslijst() {
     }
     melding.hidden = false;
   });
+}
+
+function toonMailRoute(form, tekst) {
+  let melding = form.querySelector('.form-error');
+  if (!melding) {
+    melding = document.createElement('p');
+    melding.className = 'form-error';
+    form.querySelector('button[type="submit"]').insertAdjacentElement('afterend', melding);
+  }
+  melding.textContent = tekst;
+  const link = document.createElement('a');
+  link.href = mailLink(form);
+  link.textContent = 'Open mail met je aanvraag';
+  melding.appendChild(link);
+  melding.append('. Werkt dat niet? Mail naar info@mielus.be of stuur een DM naar @deejay_mielus.');
 }
 
 function mailLink(form) {
