@@ -510,13 +510,6 @@ function initMobileMenu() {
 async function submitForm(form, successEl) {
   if (!form.reportValidity()) return;
 
-  // Zolang de eigen route niet actief is, gaat de aanvraag rechtstreeks via mail.
-  if (new URL(form.action).pathname !== '/api/aanvraag') {
-    toonMailRoute(form, 'Je aanvraag staat klaar in een mail, je hoeft ze enkel nog te versturen. ');
-    window.location.href = mailLink(form);
-    return;
-  }
-
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
 
