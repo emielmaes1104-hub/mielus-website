@@ -203,6 +203,8 @@ const EVENTS = [
   { date: '2026-10-30', name: 'Nacht van de Jeugdbeweging', place: 'Aalst' },
   { date: '2026-11-03', name: 'Openingsfuif VEK', place: 'Vooruit, Gent', town: 'Gent' },
   { date: '2026-11-07', name: 'Jinfection', place: 'Serskamp' },
+  { date: '2026-11-17', name: 'Horeca Expo · Super 8', place: 'Flanders Expo, Gent', town: 'Gent' },
+  { date: '2026-11-18', name: 'Horeca Expo · Super 8', place: 'Flanders Expo, Gent', town: 'Gent' },
   { date: '2026-11-20', name: 'Galabal Curatio', place: 'Gent' },
   { date: '2026-11-21', name: 'Campagnebal', place: 'Lede' },
 ];
