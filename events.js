@@ -92,6 +92,7 @@ const EVENTS = [
   { date: '2024-08-17', name: 'Body Language', place: 'Laarne' },
   { date: '2024-08-24', name: 'ESVEEKA', place: 'Serskamp' },
   { date: '2024-08-30', name: 'Good Mood', place: 'Aalst' },
+  { date: '2024-09-11', name: 'Club Celebration', place: 'Albufeira, Portugal', town: 'Albufeira' },
   { date: '2024-09-13', name: 'Fuif Cinema', place: 'Aalst' },
   { date: '2024-09-14', name: 'Tabula Rasa · Main', place: 'Wetteren' },
   { date: '2024-09-14', name: 'Tabula Rasa · Bodega', place: 'Wetteren' },
