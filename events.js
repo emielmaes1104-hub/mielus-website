@@ -209,7 +209,6 @@ const EVENTS = [
   { date: '2026-11-17', name: 'Horeca Expo · Super 8', place: 'Flanders Expo, Gent', town: 'Gent' },
   { date: '2026-11-18', name: 'Horeca Expo · Super 8', place: 'Flanders Expo, Gent', town: 'Gent' },
   { date: '2026-11-20', name: 'Galabal Curatio', place: 'Gent' },
-  { date: '2026-11-21', name: 'Campagnebal', place: 'Lede' },
   { date: '2026-12-12', name: 'Wetteren Wintert · Après-ski Fuif', place: 'Wetteren' },
 ];
 
