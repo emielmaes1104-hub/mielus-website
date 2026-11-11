@@ -4,6 +4,7 @@
    - place: wat bezoekers zien (bv. 'Vooruit, Gent')
    - town:  enkel nodig als place geen gemeente uit TOWNS is (bv. place 'Ikon, Antwerpen', town 'Antwerpen')
    - end:   optioneel, voor meerdaagse events
+   - url:   optioneel, link naar de pagina van de organisator (naam wordt klikbaar)
    Nieuwe gemeente? Zet ze ook in TOWNS met [breedtegraad, lengtegraad]. */
 
 const EVENTS = [
@@ -207,6 +208,7 @@ const EVENTS = [
   { date: '2026-11-18', name: 'Horeca Expo · Super 8', place: 'Flanders Expo, Gent', town: 'Gent' },
   { date: '2026-11-20', name: 'Galabal Curatio', place: 'Gent' },
   { date: '2026-11-21', name: 'Campagnebal', place: 'Lede' },
+  { date: '2026-12-12', name: 'Wetteren Wintert · Après-ski Fuif', place: 'Wetteren' },
 ];
 
 const TOWNS = {

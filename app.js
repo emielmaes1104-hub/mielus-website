@@ -51,7 +51,7 @@ function renderUpcoming(upcoming) {
             <span class="event-year">${d.getFullYear()}</span>
           </div>
           <div class="event-info">
-            <h3 class="event-name">${escapeHtml(ev.name)}</h3>
+            <h3 class="event-name">${/^https?:\/\//.test(ev.url || '') ? `<a href="${escapeHtml(ev.url)}" target="_blank" rel="noopener">${escapeHtml(ev.name)} ↗</a>` : escapeHtml(ev.name)}</h3>
             <p class="event-location">${PIN_SVG}${escapeHtml(ev.place || 'Locatie volgt')}</p>
           </div>
           ${i === 0 ? '<div class="event-badges"><span class="badge badge--festival">Volgende</span></div>' : ''}
