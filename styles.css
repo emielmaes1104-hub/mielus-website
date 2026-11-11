@@ -1573,6 +1573,29 @@ textarea { resize: vertical; min-height: 120px; }
   transition: border-color 0.2s, color 0.2s;
 }
 .played-wall li:hover { border-color: var(--border-blue); color: var(--text); }
+.venues-eyebrow { display: block; margin: 36px 0 14px; }
+.venue-row {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.venue-row li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-blue);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.venue-row li span {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
 
 /* ===== GALLERY ===== */
 .gallery-head { margin: 72px 0 28px; }
