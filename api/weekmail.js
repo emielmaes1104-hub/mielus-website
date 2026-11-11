@@ -35,6 +35,11 @@ module.exports = async (req, res) => {
   let status = 'enkel voorbeeld (versturen naar de lijst staat nog uit)';
 
   try {
+    // Template in Brevo bijwerken, zodat Emiel daar altijd de actuele versie ziet.
+    const sjablonen = await brevo('GET', '/smtp/templates?limit=50').catch(() => null);
+    const sjabloon = ((sjablonen && sjablonen.data && sjablonen.data.templates) || []).find(t => t.name === 'MIELUS Weekmail Bookerslijst');
+    if (sjabloon) await brevo('PUT', `/smtp/templates/${sjabloon.id}`, { subject: mail.onderwerp, htmlContent: mail.html }).catch(() => null);
+
     const info = await brevo('GET', `/contacts/lists/${lijst}`);
     const aantal = (info.data && info.data.uniqueSubscribers) || 0;
 
