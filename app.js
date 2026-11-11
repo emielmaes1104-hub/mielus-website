@@ -642,6 +642,10 @@ function initFormHandling() {
     const nu = new Date();
     datum.min = `${nu.getFullYear()}-${String(nu.getMonth() + 1).padStart(2, '0')}-${String(nu.getDate()).padStart(2, '0')}`;
 
+    // Link uit de weekmail (?datum=2026-11-27#boeken): datum alvast invullen.
+    const gevraagd = new URLSearchParams(location.search).get('datum');
+    if (/^\d{4}-\d{2}-\d{2}$/.test(gevraagd || '') && gevraagd >= datum.min) datum.value = gevraagd;
+
     bookingForm.addEventListener('submit', e => {
       e.preventDefault();
       submitForm(bookingForm, document.getElementById('form-success'));
